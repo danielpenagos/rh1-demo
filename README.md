@@ -18,3 +18,8 @@ oc apply -f 1.gitopsapps/rhsso.yaml
 oc apply -f 1.gitopsapps/servicemesh.yaml
 
 # 4. Install the user applications/demos as gitops apps
+
+# clean up
+For operators:
+https://docs.openshift.com/container-platform/4.10/operators/admin/olm-deleting-operators-from-cluster.html
+ oc delete csv <csv_name> -n <namespace>
