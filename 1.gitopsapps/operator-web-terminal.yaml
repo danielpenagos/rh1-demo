@@ -3,13 +3,13 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
-  name: service-mesh
-  namespace: service-mesh
+  name: web-terminal
+  namespace: openshift-operators
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: istio-system
+    namespace: web-terminal
     server: https://kubernetes.default.svc
   project: default
   source:
